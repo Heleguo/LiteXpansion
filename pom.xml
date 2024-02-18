@@ -132,7 +132,4 @@
                             <pattern>org.bstats</pattern>
                             <shadedPattern>dev.j3fftw.litexpansion.bstats</shadedPattern>
                         </relocation>
-=======
->>>>>>> 10930c6c0e1316dbba73f46b90825adf275209f4
-
 </project>
