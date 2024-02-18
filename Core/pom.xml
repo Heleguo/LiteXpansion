@@ -24,9 +24,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.Slimefun</groupId>
+            <groupId>com.github.StarWishsama</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>1aeb0e8</version>
+            <version>f30bdf27be</version>
             <scope>provided</scope>
         </dependency>
 
@@ -50,15 +50,24 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.Slimefun-Addon-Community</groupId>
+            <groupId>com.github.SlimefunGuguProject</groupId>
             <artifactId>extrautils</artifactId>
-            <version>73e76ac06c</version>
+            <version>bf89aee6ae</version>
         </dependency>
         <dependency>
             <groupId>dev.j3fftw</groupId>
             <artifactId>NMS_1.20.4_Enchants</artifactId>
             <version>MODIFIED</version>
         </dependency>
+
+        <dependency>
+            <groupId>net.guizhanss</groupId>
+            <artifactId>GuizhanLibPlugin</artifactId>
+            <version>1.6.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+             
     </dependencies>
 
     <build>
