@@ -49,4 +49,18 @@ recipes:
 
 你也可以在`#litexpansion`频道中讨论任何有关 LiteXpansion 的内容。
 
+<<<<<<< HEAD
 [加入Slimefun 官方Discord服务器](https://discord.gg/slimefun)
+=======
+<p align="center">
+  <a href="https://discord.gg/slimefun">
+    <img src="https://discordapp.com/api/guilds/565557184348422174/widget.png?style=banner3" alt="Discord Invite"/>
+  </a>
+</p>
+
+### 📥 Compilation
+To be able to compile this source,
+you need to get yourself [BuildTools](https://www.spigotmc.org/wiki/buildtools/) from SpigotMC and
+create 1.20.4 Minecraft mappings - NMS which are being used in [NMS_1.20.4_Enchants](NMS_1.20.4_Enchants)
+<br><b>Help-line: ``java -jar .\BuildTools.jar --remapped --rev 1.20.4``
+>>>>>>> 10930c6c0e1316dbba73f46b90825adf275209f4

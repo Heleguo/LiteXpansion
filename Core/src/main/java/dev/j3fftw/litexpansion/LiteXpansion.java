@@ -9,11 +9,17 @@ import dev.j3fftw.litexpansion.uumatter.UUMatter;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
+<<<<<<< HEAD:src/main/java/dev/j3fftw/litexpansion/LiteXpansion.java
 import net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater;
+=======
+import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.BlobBuildUpdater;
+>>>>>>> 10930c6c0e1316dbba73f46b90825adf275209f4:Core/src/main/java/dev/j3fftw/litexpansion/LiteXpansion.java
 import org.bstats.MetricsBase;
 import org.bstats.bukkit.Metrics;
+import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nonnull;
@@ -73,6 +79,17 @@ public class LiteXpansion extends JavaPlugin implements SlimefunAddon {
     }
 
     private void registerEnchantments() {
+        String version = Bukkit.getServer().getVersion();
+        if(version.contains("1.20.4")){
+            try {
+                Class.forName("dev.j3fftw.litexpansion.nms.NMSEnchants").getDeclaredConstructor(Plugin.class).newInstance(this);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return;
+        }
+
+
         if (!Enchantment.isAcceptingRegistrations()) {
             Reflections.setStaticField(Enchantment.class, "acceptingNew", true);
         }
@@ -82,6 +99,8 @@ public class LiteXpansion extends JavaPlugin implements SlimefunAddon {
             "ADVANCEDLX_SOLAR_HELMET", "HYBRID_SOLAR_HELMET", "ULTIMATE_SOLAR_HELMET",
             "DIAMOND_DRILL"
         });
+
+
 
         // Prevent double-registration errors
         if (Enchantment.getByKey(glowEnchantment.getKey()) == null) {
